@@ -1,0 +1,9 @@
+#!/bin/bash
+
+## Description: Run please CLI (of statamic CMS)
+## Usage: please [flags] [args]
+## Example: "ddev please make:user"
+## ProjectTypes: laravel
+## ExecRaw: true
+
+php ./please "$@"
