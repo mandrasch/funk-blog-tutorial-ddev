@@ -6,6 +6,8 @@ ddev config --project-type=laravel --docroot=public
 # browsersync / mix support added via docker-composer.browsersync.yaml,
 # HTTPS is currently not supported of the box, in future you can just get
 # the official one via ddev get drud/ddev-browsersync
+# https://github.com/drud/ddev-browsersync/pull/21
+# Added browsersync in webpack.mix.js + footer, see commits
 ddev restart
 ```
 
@@ -29,9 +31,7 @@ ddev exec npm install
 ddev exec npm run dev
 ```
 
-Add ddev-browsersync to `webpack.mix.js`.
-
-Afterwards you only need to run those two commands:
+Afterwards you only need to run those two commands to develop locally:
 
 ```
 ddev launch
