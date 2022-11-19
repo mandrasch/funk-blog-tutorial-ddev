@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    
+
     <link href="{{ mix src='/css/tailwind.css' }}" rel="stylesheet">
     <script src="{{ mix src='/js/site.js' }}"></script>
     <title>{{ title ?? site:name }} - {{ settings:title }}</title>
@@ -17,6 +17,13 @@
         {{ template_content }}
         {{ partial:layouts/footer }}
     </main>
+
+    @if (getenv('APP_ENV') === 'local')
+        <script id="__bs_script__">//<![CDATA[
+            document.write("<script async src='https://HOST:3000/browser-sync/browser-sync-client.js'><\/script>".replace("HOST", location.hostname));
+        //]]></script>
+    @endif
+
 </body>
 
 </html>

@@ -19,6 +19,15 @@ mix.postCss('resources/css/tailwind.css', 'public/css', [
     require('tailwindcss'),
 ])
 
+if(!mix.inProduction()){
+    // browsersync for DDEV
+    mix.browserSync({
+        proxy: "localhost",
+        open: false,
+        ui: false
+    });
+}
+
 if (mix.inProduction()) {
    mix.version();
 }
