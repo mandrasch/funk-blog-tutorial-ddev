@@ -1,15 +1,4 @@
-This repo is used on https://statamictutorials.com by Jonas Siewertsen
-
-Added DDEV via: 
-```
-ddev config --project-type=laravel --docroot=public
-# browsersync / mix support added via docker-composer.browsersync.yaml,
-# HTTPS is currently not supported of the box, in future you can just get
-# the official one via ddev get drud/ddev-browsersync
-# https://github.com/drud/ddev-browsersync/pull/21
-# Added browsersync in webpack.mix.js + footer, see commits
-ddev restart
-```
+This repo is used on https://statamictutorials.com by Jonas Siewertsen, added DDEV support.
 
 ## Local setup after cloning
 
@@ -40,3 +29,17 @@ ddev exec npm run watch
 ```
 
 See more: https://my-ddev-lab.mandrasch.eu/tutorials/cms-and-frameworks/statamic.html
+
+## How was this created?
+
+Added DDEV via: 
+
+```
+ddev config --project-type=laravel --docroot=public
+# browsersync / mix support added via docker-composer.browsersync.yaml,
+# HTTPS is currently not supported of the box, in future you can just get
+# the official one via 'ddev get drud/ddev-browsersync'
+# https://github.com/drud/ddev-browsersync/pull/21
+# Added browsersync in webpack.mix.js + footer, see commits
+ddev restart
+```
